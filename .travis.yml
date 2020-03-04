@@ -65,7 +65,7 @@ jobs:
     deploy:
       provider: releases
       api_key:
-        secure: "k9nwJ5ZASPqzxyFeIiPVagPXxnjDYCESjMSTzG4W8MOypVONgwa305YL4+rMK28Rh8bL3DxoDLjt3PnqgjLhZXr8ZwaaKVuVg/jKfBaoIghF3T+GUH5Oj2CxpTwhH6P4Ukqitj9AV9PG/4+lyAOex5D/gvJz7rMmTg5EePAZRLxwGLDIKD0M+Je+zGJZJzlL+8+LbBPnwXrZHlaRG21bSallVsya3JocusZKyCTijR/3QhWt3KTCjSHoo5rNsIlhKHSa4NpLz3bHGc1a/avDKpT4AseKOjMIa1Mbq38icL/PNVTtRWp8Mg+Yj+GzdJ45rrhWf/PUVEckzFecTLJwBtkn39+iOQwDJc8OTSl15i4rQuQS7dsMTObYJblS2nHPzmKKN5wdH/Kz2Pm0JHhT3M1QB8BiLGtYbl/H30bSIYhzD6R0VUZhzHJ+eg+tOXLNhKYUEp9TFzY52z3nVaqg6Jcg4ytT1w95pft5ohdh/qLRa1oXD+iYVEqLbWNPAqAOtWVlg9M2v29QbRNSZeatBhiwdzH1udfEJyaYjjDNeDD09uz7NMG/j2xB2KAbyc9/n4SPTr+y/z+dUqcoTlvROmRDblLbohrfdRZfQYdkGvZIRiVJaOwdQsqRhvnwRrTHz3KHSXlCnvxZMDP7m1dWAcKlbHGPum4dmquxtZWPc5U="
+        secure: "ZdZJ/cXu3iHahb0+nM6u0bW0f9CsjkQk4yR6SULxZ/+MkQSmse/wxt+2hEPFfM4oownnvdFRqHocM99PUpijQQpNHNe5ZyGWieCZwOr/EmDbpyLqFmYjGuu/RLsxTcF5rVff9KYHtriLOkd7el1E0PhnUIVz6mPRlNHSTUqBh2Wucu92SxD29uWBLOq7rPoQYQ3fcKZT5a54qyuXM3h1bhgwsxIVTgt84zifcj2XJIGrd8owQ5HJO22/+QU+s6t7UYghHFuE+VfMPyNRpAS4Bu4vhCK6rpFV0slHSwQ3VilS3rJq5hbUxHNaJbdv/LK21Ef82QbWR1pYm6puxB52WO4k/qlyDqeDxr+Tw96AFL/y2DRAEwLvLHU/qRGe3qvSX66T0DW851uH89qF1rSfOY29hmfaXVUYADRG1cFU6N6LwddNQIdx7uswaed40r5qRmEP6F6Di0+4aErFEzviLPnlVdly4aMSnDHc5VbmrtFRPkdzgME26XRQdFOloyNn8EaNUzIqA7lp2SnV7PHGkDZfbOJfQNThXBezjFrb37tjyVSKQqNNQ0DLyu5ESbqeravSFkHHTCJXBQCTWhE0v5r9oHBCOjr/7Z7H2VLtXRpdMrQxjLmPt9YgiGSPGUr9YLDzfuXdEBaD1umgO8k2KeJ3rbRR33V9SEfzv6bRCMw="
       file_glob: true
       file:
         - $TRAVIS_BUILD_DIR/app/build/outputs/apk/release/*.apk
@@ -73,7 +73,7 @@ jobs:
       skip_cleanup: true
       draft: false
       on:
-        tags: true
+        tags: false
       name: $TRAVIS_TAG
       tag_name: $TRAVIS_TAG
       body: "Generated release from Travis CI for build $TRAVIS_BUILD_NUMBER"
